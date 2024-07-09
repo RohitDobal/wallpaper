@@ -19,7 +19,6 @@ Create a simple Wallpaper App using Flutter. The app allows users to browse and 
     - Set the wallpaper as the home screen background.
     - Set the wallpaper as the lock screen background.
 
-The cleaned data was saved as `Cleaned_Data.csv`.
 
 ## API Integration
 Uses the Unsplash API to fetch wallpapers.
