@@ -44,3 +44,15 @@ Uses GetX for state management.
 - On the detail screen, choose to set the wallpaper as the home screen or lock screen background.
 
 ## Screenshots
+![img1](https://github.com/RohitDobal/wallpaper/assets/110084471/5354b366-ed4e-4d3e-8a27-1be44442e714)
+
+![img2](https://github.com/RohitDobal/wallpaper/assets/110084471/f554e750-5df0-4d07-aad3-c1cbd33a1f9e)
+
+![img3](https://github.com/RohitDobal/wallpaper/assets/110084471/ed02cc1a-2c4d-4ad3-a80f-d0f875dfc465)
+
+![img4](https://github.com/RohitDobal/wallpaper/assets/110084471/277d3f7b-c74b-403c-97ab-7286acfbfeb9)
+
+![img5](https://github.com/RohitDobal/wallpaper/assets/110084471/dbf5c000-9fba-46ff-9923-905962aa7c89)
+
+
+
