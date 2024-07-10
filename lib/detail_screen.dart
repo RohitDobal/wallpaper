@@ -64,7 +64,7 @@ class DetailScreen extends StatelessWidget {
 
   Future<void> _setWallpaper(int location) async {
     try {
-      // Download the image into a temporary directory
+      
       var response = await http.get(Uri.parse(imageUrl));
       if (response.statusCode == 200) {
         var documentDirectory = await getApplicationDocumentsDirectory();
@@ -72,7 +72,7 @@ class DetailScreen extends StatelessWidget {
         var file = File(filePath);
         await file.writeAsBytes(response.bodyBytes);
 
-        // Set the wallpaper
+        
         await WallpaperManagerFlutter().setwallpaperfromFile(file, location);
 
         Get.snackbar('Success', 'Wallpaper set successfully');
