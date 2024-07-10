@@ -35,6 +35,7 @@ Uses GetX for state management.
 - cached_network_image: ^3.2.0
 - wallpaper_manager_flutter: ^0.0.2
 - shimmer: ^2.0.0
+- path_provider: ^2.1.3
 
 ## Usage
 - Launch the app to see the home screen displaying a grid of wallpapers.
