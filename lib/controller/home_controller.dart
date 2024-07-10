@@ -8,11 +8,11 @@ class HomeController extends GetxController {
   var isFetchingMore = false.obs;
   var page = 1;
   final String accessKey = 'JtnqJrkLVabUGdVmIAgiJoZz901iqD_tSYwQeQFL67Y';
-  var isGridView = true.obs; // Observable variable to track view mode
+  var isGridView = true.obs; 
   var gridScrollPosition =
-      0.0.obs; // Observable variable to store grid scroll position
+      0.0.obs; 
   var listScrollPosition =
-      0.0.obs; // Observable variable to store list scroll position
+      0.0.obs; 
 
   @override
   void onInit() {
