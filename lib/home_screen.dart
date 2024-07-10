@@ -111,7 +111,7 @@ class HomeScreen extends StatelessWidget {
       }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Save the current scroll position
+          
           if (homeController.isGridView.value) {
             homeController.gridScrollPosition.value =
                 gridScrollController.offset;
@@ -120,10 +120,10 @@ class HomeScreen extends StatelessWidget {
                 listScrollController.offset;
           }
 
-          // Toggle the view mode
+          
           homeController.toggleViewMode();
 
-          // Restore the scroll position of the new view
+          
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (homeController.isGridView.value) {
               gridScrollController
