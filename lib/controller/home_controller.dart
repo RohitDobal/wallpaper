@@ -27,8 +27,12 @@ class HomeController extends GetxController {
           'https://api.unsplash.com/photos?client_id=$accessKey&page=$page'));
       if (response.statusCode == 200) {
         var jsonResponse = json.decode(response.body) as List;
-        var newWallpapers =
-            jsonResponse.map((item) => Wallpaper.fromJson(item)).toList();
+        List<Wallpaper> newWallpapers = [];
+
+        for (var item in jsonResponse) {
+          Wallpaper wallpaper = Wallpaper.fromJson(item);
+          newWallpapers.add(wallpaper);
+        }
         wallpapers.assignAll(newWallpapers);
       } else {
         Get.snackbar('Error', 'Failed to fetch wallpapers');
@@ -48,10 +52,21 @@ class HomeController extends GetxController {
           'https://api.unsplash.com/photos?client_id=$accessKey&page=$page'));
       if (response.statusCode == 200) {
         var jsonResponse = json.decode(response.body) as List;
-        var newWallpapers =
-            jsonResponse.map((item) => Wallpaper.fromJson(item)).toList();
-        wallpapers.addAll(newWallpapers.where((newWallpaper) => !wallpapers.any(
-            (existingWallpaper) => existingWallpaper.id == newWallpaper.id)));
+        List<Wallpaper> newWallpapers = [];
+
+        for (var item in jsonResponse) {
+          Wallpaper wallpaper = Wallpaper.fromJson(item);
+          newWallpapers.add(wallpaper);
+        }
+
+        for (var newWallpaper in newWallpapers) {
+          
+          if (!wallpapers.any(
+              (existingWallpaper) => existingWallpaper.id == newWallpaper.id)) {
+            
+            wallpapers.add(newWallpaper);
+          }
+        }
       } else {
         Get.snackbar('Error', 'Failed to fetch more wallpapers');
       }
